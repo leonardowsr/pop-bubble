@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Overpass:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: rgb(157, 255, 255);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-family: Noto Serif, Helvetica, sans-serif;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.jogo-area {
+  position: relative;
+  border: rgb(0, 0, 0) 1px solid;
+  width: 500px;
+  height: 400px;
+}
+.bolhinha {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  animation-name: nascer;
+  animation-duration: 0.2s;
+  cursor: pointer;
+  box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.24),
+    inset -5px 2px 5px rgba(0, 0, 0, 0.473),
+    inset 2px -3px 5px rgba(255, 255, 255, 0.288);
+}
+.bolhinha::after {
+  content: ' ';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.137);
+  height: 6px;
+  width: 6px;
+  left: 20px;
+  top: 8px;
+  border-radius: 50%;
+  box-shadow: 1px 7px 0px -1px rgba(255, 255, 255, 0.137);
+}
+@keyframes nascer {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+  to {
+    width: 30px;
+    height: 30px;
+  }
+}
+.botao-iniciar {
+  display: block;
+  text-align: center;
+}
+.botao-iniciar button {
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #d73829;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  transition: all 0.2s;
+}
+.botao-iniciar button:hover {
+  background-color: white;
+  color: #000000;
+}
+.score {
+  font-size: 23px;
+}
+.velocidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.timer {
+  display: flex;
+  gap: 10px;
+}
+.velocidade button,
+.timer button {
+  font-size: 15px;
+  width: 23px;
+  color: #d73829;
+  cursor: pointer;
+}
+.contagem-regressiva {
+  font-size: 15px;
+}
+.butoes-principais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modal-screen {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.788);
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+.modal-screen ul {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 5px;
+  /* background-color: aliceblue; */
+  font-size: 18px;
+  text-align: center;
+  margin: 20%;
+}
+.modal-screen li {
+  margin: 5px;
+  border-bottom: 1px solid rgb(49, 245, 245);
+}
+.hidden {
+  display: none;
+}
+.ponto-notificacao {
+  position: absolute;
+  font-weight: 600;
+  color: #d73829;
+  font-size: 23px;
+  z-index: 1;
+}
+@media screen and (max-height: 689px) {
+  .botao-iniciar button {
+    font-size: 13px;
+  }
+  .score {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .modal-screen ul {
+    font-size: 12px;
+  }
+  .menu {
+    gap: 3px;
+    font-size: 13px;
+  }
+  img {
+    display: none;
+  }
+  .contagem-regressiva {
+    display: flex;
+    gap: 10px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+footer a {
+  width: 20px;
+  margin: 4px;
+}
+@media screen and (max-width: 550px) {
+  .jogo-area {
+    width: 310px;
+    height: 230px;
+  }
+  .menu {
+    font-size: 11px;
+  }
+  .botao-iniciar button {
+    font-size: 15px;
+  }
+  .velocidade button,
+  .timer button {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .score {
+    font-size: 20px;
+  }
+  .modal-screen ul {
+    font-size: 12px;
+  }
+  img {
+    width: 120px;
+  }
+  footer img {
+    width: 18px;
+  }
+}

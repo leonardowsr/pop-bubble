@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/logo pop bubble.png" type="image/x-icon">
+</head>
+
+<body>
+  <main data-main="main">
+    <img width="170px" src="img/logo pop bubble.png" alt="">
+    <section class="menu">
+      <div>
+      </div>
+      <div class="contagem-regressiva">
+        <h1 data-js="score" class="score">SCORE</h1>
+        <h1>tempo <span data-contagem="contagem" style="color:red;"></span> </h1>
+      </div>
+      <div class="velocidade">
+        <h3>Speed: 1 bolha a cada
+          <span data-speed="velocidade" value="1000" style="color:red;">1.0</span>
+          segundos
+          <button data-btn-speed="aumentar">+</button>
+          <button data-btn-speed="diminuir">-</button>
+        </h3>
+      </div>
+      <div class="timer">
+        <h3>timer:
+          <span data-timer="timer" style="color:red;">10</span>
+          segundos
+        </h3>
+        <button data-btn-timer="aumentar">+</button>
+        <button data-btn-timer="diminuir">-</button>
+      </div>
+      <div class="butoes-principais">
+        <div data-js="botao-iniciar" class="botao-iniciar">
+          <button>Iniciar</button>
+        </div>
+        <div data-js="botao-historico" class="botao-iniciar">
+          <button>Historico</button>
+        </div>
+        <div data-js="botao-ajuda" class="botao-iniciar botao-ajuda">
+          <button>Como jogar!</button>
+        </div>
+      </div>
+    </section>
+
+    <section data-js="jogo-area" class="jogo-area">
+    </section>
+    <section data-js="modal" class="modal-screen hidden">
+      <ul data-lista="historico">
+        <h2 data-lista="title">Clique em qualquer lugar para sair</h2> <br>
+      </ul>
+    </section>
+
+    <section data-js="como-jogar" class="modal-screen hidden">
+      <ul data-lista="historico">
+        <h2 data-lista="title">Clique em qualquer lugar para sair</h2> <br>
+        <h2>Como jogar :</h2> <br>
+        <h3>1- Escolha a velocidade com que as bolhas irão aparecer.<br>
+          por padrão vem setado 1 segundo para cada bolha aparecer.
+        </h3>
+        <br>
+        <h3>2- Escolha quantos segundos você quer que dure a seção/partida</h3>
+        <br>
+        <h3>3- Clique em iniciar</h3>
+        <br>
+        <h3>4- Clique nas bolhas com o clique esquerdo do seu mouse</h3>
+        <br>
+        <h3>5- Elas irão estourar e você receberá um ponto</h3>
+        <br>
+        <h3>6- Após acabar o tempo, ficará salvo no historico a sua partida</h3>
+        <br>
+        <h3>se divirta :)</h3>
+      </ul>
+    </section>
+    <footer data-js="footer">
+      <p>Feito por leonardo | Acesse o Github:</p>
+      <a href="https://github.com/Marshalldt1/pop-bubble" target="_blank"><img src="img/github.png" width="20px" alt=""></a>
+    </footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
